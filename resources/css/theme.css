@@ -1,0 +1,72 @@
+/* ====== TEMA TERANG (DEFAULT) ====== */
+:root,
+[data-theme="light"] {
+    /* Primary variables */
+    --bg-body:        #f3f4f6;
+    --bg-card:        #ffffff;
+    --bg-sidebar:     #0F172A;
+    --bg-sidebar-hover: #1E293B;
+    --bg-input:       #ffffff;
+
+    --text-primary:   #111827;
+    --text-secondary: #6b7280;
+    --text-sidebar:   #CBD5E1;
+    --text-sidebar-active: #ffffff;
+
+    --border-color:   #e5e7eb;
+    --shadow-card:    0 1px 3px rgba(0,0,0,0.05);
+
+    --accent:         #2563eb;
+    --accent-hover:   #1d4ed8;
+
+    --danger:         #dc2626;
+    --success:        #10b981;
+    --warning:        #f59e0b;
+
+    /* ===== ALIAS (buat nampung CSS lama yang pakai nama pendek) ===== */
+    --bg:             #f3f4f6;
+    --surface:        #ffffff;
+    --text:           #111827;
+    --text-muted:     #6b7280;
+    --border:         #e5e7eb;
+    --primary:        #0F172A;
+    --primary-hover:  #1E293B;
+}
+
+/* ====== TEMA GELAP ====== */
+[data-theme="dark"] {
+    --bg-body:        #0f172a;
+    --bg-card:        #1e293b;
+    --bg-sidebar:     #020617;
+    --bg-sidebar-hover: #1e293b;
+    --bg-input:       #334155;
+
+    --text-primary:   #ffffff;
+    --text-secondary: #ffffff;
+    --text-sidebar:   #CBD5E1;
+    --text-sidebar-active: #ffffff;
+
+    --border-color:   #334155;
+    --shadow-card:    0 1px 3px rgba(0,0,0,0.3);
+
+    --accent:         #3b82f6;
+    --accent-hover:   #2563eb;
+
+    --danger:         #ef4444;
+    --success:        #22c55e;
+    --warning:        #facc15;
+
+    /* ===== ALIAS DARK ===== */
+    --bg:             #0f172a;
+    --surface:        #1e293b;
+    --text:           #ffffff;
+    --text-muted:     #ffffff;
+    --border:         #334155;
+    --primary:        #3b82f6;
+    --primary-hover:  #2563eb;
+}
+
+/* ====== TRANSISI HALUS ====== */
+* {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}

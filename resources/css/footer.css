@@ -1,0 +1,23 @@
+footer {
+  background-color: var(--bg-sidebar);
+  color: #ffffff;
+  padding: 48px 0;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-desc {
+  color: var(--text-sidebar);
+  font-size: 14px;
+}

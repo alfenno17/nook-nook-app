@@ -1,0 +1,438 @@
+/* ====== TEMA TERANG (DEFAULT) ====== */
+:root,
+[data-theme="light"] {
+    --bg-body:        #f3f4f6;
+    --bg-card:        #ffffff;
+    --bg-sidebar:     #0F172A;
+    --bg-sidebar-hover: #1E293B;
+    --bg-input:       #ffffff;
+
+    --text-primary:   #111827;
+    --text-secondary: #6b7280;
+    --text-sidebar:   #CBD5E1;
+    --text-sidebar-active: #ffffff;
+
+    --border-color:   #e5e7eb;
+    --shadow-card:    0 1px 3px rgba(0,0,0,0.05);
+
+    --accent:         #2563eb;
+    --accent-hover:   #1d4ed8;
+
+    --danger:         #dc2626;
+    --success:        #10b981;
+    --warning:        #f59e0b;
+
+    --bg:             #f3f4f6;
+    --surface:        #ffffff;
+    --text:           #111827;
+    --text-muted:     #6b7280;
+    --border:         #e5e7eb;
+    --primary:        #0F172A;
+    --primary-hover:  #1E293B;
+}
+
+/* ====== TEMA GELAP ====== */
+[data-theme="dark"] {
+    --bg-body:        #0f172a;
+    --bg-card:        #1e293b;
+    --bg-sidebar:     #020617;
+    --bg-sidebar-hover: #1e293b;
+    --bg-input:       #334155;
+
+    --text-primary:   #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-sidebar:   #CBD5E1;
+    --text-sidebar-active: #ffffff;
+
+    --border-color:   #334155;
+    --shadow-card:    0 1px 3px rgba(0,0,0,0.3);
+
+    --accent:         #3b82f6;
+    --accent-hover:   #2563eb;
+
+    --danger:         #ef4444;
+    --success:        #22c55e;
+    --warning:        #facc15;
+
+    --bg:             #0f172a;
+    --surface:        #1e293b;
+    --text:           #ffffff;
+    --text-muted:     #cbd5e1;
+    --border:         #334155;
+    --primary:        #3b82f6;
+    --primary-hover:  #2563eb;
+}
+
+* {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* SAFETY NET: SVG tanpa class → 24x24 */
+svg:not([class]) {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+/* FORCE WARNA DARK MODE */
+[data-theme="dark"] body {
+    background-color: var(--bg-body) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] strong,
+[data-theme="dark"] td,
+[data-theme="dark"] th,
+[data-theme="dark"] label,
+[data-theme="dark"] a {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .header-title,
+[data-theme="dark"] .page-title,
+[data-theme="dark"] .metric-value,
+[data-theme="dark"] .card-title {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .metric-label,
+[data-theme="dark"] .page-subtitle,
+[data-theme="dark"] .section-subtitle,
+[data-theme="dark"] .activity-time,
+[data-theme="dark"] .footer-desc {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .top-header,
+[data-theme="dark"] .header,
+[data-theme="dark"] .table-wrapper,
+[data-theme="dark"] .card-table,
+[data-theme="dark"] .card,
+[data-theme="dark"] .metric-card {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .table-wrapper th,
+[data-theme="dark"] .card-table thead {
+    background-color: var(--bg-body) !important;
+}
+
+[data-theme="dark"] .btn-dashboard,
+[data-theme="dark"] .btn-confirm,
+[data-theme="dark"] .btn-submit,
+[data-theme="dark"] .btn-copy,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .room-card-btn {
+    color: #ffffff !important;
+}
+/* ============================================
+   TOMBOL DI DARK MODE — biar tidak menyatu dengan background
+   ============================================ */
+
+/* Tombol gelap (dashboard, confirm, submit, copy) */
+[data-theme="dark"] .btn-dashboard,
+[data-theme="dark"] .btn-confirm,
+[data-theme="dark"] .btn-submit,
+[data-theme="dark"] .btn-copy,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .room-card-btn,
+[data-theme="dark"] .btn-room,
+[data-theme="dark"] .btn-booking {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+    border: 1px solid #475569 !important;
+}
+
+[data-theme="dark"] .btn-dashboard:hover,
+[data-theme="dark"] .btn-confirm:hover,
+[data-theme="dark"] .btn-submit:hover,
+[data-theme="dark"] .btn-copy:hover,
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .room-card-btn:hover,
+[data-theme="dark"] .btn-room:hover,
+[data-theme="dark"] .btn-booking:hover {
+    background-color: #475569 !important;
+    border-color: #64748b !important;
+}
+
+/* Tombol ghost (outline / transparan) */
+[data-theme="dark"] .btn-ghost,
+[data-theme="dark"] .btn-outline,
+[data-theme="dark"] .btn-logout,
+[data-theme="dark"] .btn-secondary {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid #475569 !important;
+}
+
+[data-theme="dark"] .btn-ghost:hover,
+[data-theme="dark"] .btn-outline:hover,
+[data-theme="dark"] .btn-logout:hover,
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: #334155 !important;
+    border-color: #64748b !important;
+}
+
+/* Tombol hijau (verifikasi) */
+[data-theme="dark"] .btn-verifikasi,
+[data-theme="dark"] .btn-invoice,
+[data-theme="dark"] .btn-success {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+    border: 1px solid #10B981 !important;
+}
+
+[data-theme="dark"] .btn-verifikasi:hover,
+[data-theme="dark"] .btn-invoice:hover,
+[data-theme="dark"] .btn-success:hover {
+    background-color: #10B981 !important;
+}
+
+/* Tombol merah (hapus / danger) */
+[data-theme="dark"] .btn-delete,
+[data-theme="dark"] .btn-danger {
+    background-color: #7f1d1d !important;
+    color: #fca5a5 !important;
+    border: 1px solid #b91c1c !important;
+}
+
+[data-theme="dark"] .btn-delete:hover,
+[data-theme="dark"] .btn-danger:hover {
+    background-color: #b91c1c !important;
+    color: #ffffff !important;
+}
+
+/* Tombol biru (edit, table) */
+[data-theme="dark"] .btn-edit,
+[data-theme="dark"] .btn-table,
+[data-theme="dark"] .btn-action.btn-edit {
+    background-color: #1e40af !important;
+    color: #ffffff !important;
+    border: 1px solid #3b82f6 !important;
+}
+
+[data-theme="dark"] .btn-edit:hover,
+[data-theme="dark"] .btn-table:hover,
+[data-theme="dark"] .btn-action.btn-edit:hover {
+    background-color: #2563eb !important;
+}
+
+/* Tombol login (di topbar) */
+[data-theme="dark"] .btn-login {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    border: 1px solid #60a5fa !important;
+}
+
+[data-theme="dark"] .btn-login:hover {
+    background-color: #60a5fa !important;
+}
+
+/* Tombol logout (di sidebar) */
+[data-theme="dark"] .sidebar-logout .sidebar-link {
+    color: #fca5a5 !important;
+}
+
+[data-theme="dark"] .sidebar-logout .sidebar-link:hover {
+    background-color: #7f1d1d !important;
+    color: #ffffff !important;
+}
+
+/* Tombol CTA (banner) */
+[data-theme="dark"] .btn-cta-light {
+    background-color: #ffffff !important;
+    color: #0F172A !important;
+}
+
+[data-theme="dark"] .btn-cta-light:hover {
+    background-color: #f1f5f9 !important;
+}
+/* ============================================
+   BADGE & BOX DENGAN BACKGROUND — DARK MODE
+   Semua elemen ini punya warna pastel yang cocok di light,
+   tapi di dark mode perlu background gelap transparan +
+   teks terang biar tetap kebaca.
+   ============================================ */
+
+/* ===== 1. BADGE STATUS BOOKING (dashboard admin) ===== */
+[data-theme="dark"] .badge-status.badge-menunggu,
+[data-theme="dark"] .badge-menunggu {
+    background: rgba(251, 191, 36, 0.2) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(251, 191, 36, 0.4) !important;
+}
+
+[data-theme="dark"] .badge-status.badge-menunggu-verifikasi,
+[data-theme="dark"] .badge-menunggu-verifikasi {
+    background: rgba(245, 158, 11, 0.2) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(245, 158, 11, 0.4) !important;
+}
+
+[data-theme="dark"] .badge-status.badge-dibayar,
+[data-theme="dark"] .badge-dibayar {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #60a5fa !important;
+    border: 1px solid rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="dark"] .badge-status.badge-selesai,
+[data-theme="dark"] .badge-selesai {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.4) !important;
+}
+
+[data-theme="dark"] .badge-status.badge-dibatalkan,
+[data-theme="dark"] .badge-dibatalkan {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.4) !important;
+}
+
+/* ===== 2. BADGE ROLE (admin/user) ===== */
+[data-theme="dark"] .badge-role.badge-admin {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #60a5fa !important;
+    border: 1px solid rgba(59, 130, 246, 0.4) !important;
+}
+
+[data-theme="dark"] .badge-role.badge-user {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.4) !important;
+}
+
+/* ===== 3. BADGE STATUS (aktif) ===== */
+[data-theme="dark"] .badge-status {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.4) !important;
+}
+
+/* ===== 4. BADGE BADGE (aktif / nonaktif) ===== */
+[data-theme="dark"] .badge.badge-active,
+[data-theme="dark"] .badge-active {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.4) !important;
+}
+
+[data-theme="dark"] .badge.badge-inactive,
+[data-theme="dark"] .badge-inactive {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.4) !important;
+}
+
+/* ===== 5. BADGE "TERSEDIA" DI KARTU RUANGAN ===== */
+[data-theme="dark"] .room-badge,
+[data-theme="dark"] .gallery-badge {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.4) !important;
+}
+
+/* ===== 6. SECTION BADGE (Kategori, Keunggulan, dll) ===== */
+[data-theme="dark"] .section-badge {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+    border: 1px solid rgba(99, 102, 241, 0.4) !important;
+}
+
+/* ===== 7. WELCOME BADGE (Halo, nama user) ===== */
+[data-theme="dark"] .welcome-badge {
+    background: rgba(99, 102, 241, 0.15) !important;
+    color: #a5b4fc !important;
+    border: 1px solid rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ===== 8. BADGE STATUS PEMBAYARAN (di invoice) ===== */
+[data-theme="dark"] .status-pembayaran-menunggu,
+[data-theme="dark"] span[style*="background-color: #FEF3C7"],
+[data-theme="dark"] span[style*="background-color: #FDE68A"] {
+    background-color: rgba(251, 191, 36, 0.2) !important;
+    color: #fbbf24 !important;
+}
+
+[data-theme="dark"] .status-pembayaran-lunas,
+[data-theme="dark"] span[style*="background-color: #D1FAE5"] {
+    background-color: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+}
+
+/* ===== 9. ACTIVITY BADGE (dashboard admin) ===== */
+[data-theme="dark"] .status-badge {
+    background: rgba(34, 197, 94, 0.2) !important;
+    color: #4ade80 !important;
+}
+
+/* ===== 10. BADGE DI SIDEBAR ADMIN (brand-mark) ===== */
+[data-theme="dark"] .sidebar-brand-mark,
+[data-theme="dark"] .logo-mark,
+[data-theme="dark"] .footer-logo-mark {
+    background: linear-gradient(135deg, #818cf8, #a78bfa) !important;
+    color: #ffffff !important;
+}
+
+/* ===== 11. INFO BOX & DANGER BOX (pengaturan) ===== */
+[data-theme="dark"] .info-box {
+    background: rgba(59, 130, 246, 0.15) !important;
+    color: #60a5fa !important;
+    border-left-color: #3b82f6 !important;
+}
+
+[data-theme="dark"] .danger-box {
+    background: rgba(239, 68, 68, 0.15) !important;
+    color: #f87171 !important;
+    border-left-color: #ef4444 !important;
+}
+
+/* ===== 12. FLASH MESSAGES (success / error) ===== */
+[data-theme="dark"] .flash-success {
+    background: rgba(34, 197, 94, 0.15) !important;
+    color: #4ade80 !important;
+}
+
+[data-theme="dark"] .flash-error {
+    background: rgba(239, 68, 68, 0.15) !important;
+    color: #f87171 !important;
+}
+
+/* ===== 13. METRIC ICON (emoji di card) ===== */
+[data-theme="dark"] .metric-icon {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+}
+
+/* ===== 14. CATEGORY ICON & FEATURE ICON ===== */
+[data-theme="dark"] .category-icon,
+[data-theme="dark"] .feature-icon {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #a5b4fc !important;
+}
+
+/* ===== 15. AVATAR (di profile & testimonial) ===== */
+[data-theme="dark"] .avatar {
+    background: linear-gradient(135deg, #818cf8, #a78bfa) !important;
+    color: #ffffff !important;
+}
+
+/* ===== 16. BUTTON SUCCESS DI STATUS PEMBAYARAN ===== */
+[data-theme="dark"] .icon-container {
+    background-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+[data-theme="dark"] .icon-container svg {
+    stroke: #4ade80 !important;
+}
